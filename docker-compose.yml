@@ -38,7 +38,7 @@ services:
         context: .
         dockerfile: Dockerfile_Mysql
       container_name: database
-      command: [mysqld, --default-authentication-plugin=mysql_native_password, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --innodb_monitor_enable=all, --max-connections=1001]
+      command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --innodb_monitor_enable=all, --max-connections=1001]
       tty: true
       environment:
         MYSQL_ROOT_PASSWORD: rootpw
